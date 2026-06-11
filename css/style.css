@@ -1,0 +1,84 @@
+/* Hide scrollbar on slider track */
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+.slider-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Image swap on hover */
+.card-img-wrap img.primary {
+  transition: opacity 0.35s ease;
+}
+.card-img-wrap img.secondary {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.card-img-wrap:hover img.primary {
+  opacity: 0;
+}
+.card-img-wrap:hover img.secondary {
+  opacity: 1;
+}
+
+/* Mobile show-more smooth dropdown */
+#more-cards {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+}
+#more-cards.open {
+  max-height: 2400px;
+  opacity: 1;
+}
+
+/* Scrollbar thumb grows to 6px on hover/touch */
+.custom-scroll::-webkit-scrollbar {
+  height: 3px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #e5e5e5;
+  border-radius: 9px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 9px;
+}
+.custom-scroll:hover::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Drag cursor on slider */
+.slider-track {
+  cursor: grab;
+}
+.slider-track.dragging {
+  cursor: grabbing;
+}
+
+/* Mobile: show as 2-column grid and limit visible items to first 4 until expanded */
+@media (max-width: 767px) {
+  .slider-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    overflow: visible;
+    scroll-behavior: auto;
+  }
+  .slider-track.mobile-limit > .product-card:nth-child(n+5) {
+    display: none;
+  }
+  .slider-track.mobile-limit.open > .product-card:nth-child(n+5) {
+    display: block;
+  }
+}
+
+/* Enable hover-like behavior via a `.hover` class (for mobile tap-to-toggle) */
+.card-img-wrap.hover img.primary { opacity: 0; }
+.card-img-wrap.hover img.secondary { opacity: 1; }
+
+/* Clean up stray closing brace removed above */

@@ -1,17 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Product Grid Test</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Sellers</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/styles.css" />
+  <script src="css/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-gray-100 text-gray-900">
-  <main class="container mx-auto p-6">
-    <h1 class="text-2xl font-bold mb-4">Product Grid</h1>
-    <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
-  </main>
-  <script src="js/main.js"></script>
+<body class="bg-white font-sans text-gray-900">
+
+<section class="max-w-[1200px] mx-auto px-5 py-10">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between items-center mb-5">
+    <h2 class="text-2xl font-bold tracking-tight text-center md:text-left">Best Sellers</h2>
+    <a href="#" class="hidden md:inline-flex text-sm font-medium text-gray-900 items-center gap-1 hover:underline md:mt-0 mt-2">
+      Shop All Best Sellers <span>&#8594;</span>
+    </a>
+  </div>
+
+  <div class="relative">
+    <div id="slider-track" class="slider-track custom-scroll grid grid-cols-2 gap-4 md:flex md:gap-4 md:overflow-x-auto md:scroll-smooth md:pb-3 mobile-limit">
+
+      <div class="product-card shrink-0 w-170 md:w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-yellow-300 mb-3">
+          <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-1.jpg" alt="Headphones" />
+          <img class="secondary w-full h-full object-cover" src="images/image-2.jpg" alt="Headphones alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Outside Vibes T-Shirt Sunshine</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">1,234 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-gray-100 mb-3">
+          <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-3.jpg" alt="Sunglasses" />
+          <img class="secondary w-full h-full object-cover" src="images/image-4.jpg" alt="Sunglasses alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Nike Bottle Outside Vibes Forest Green</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">1,201 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-red-500 mb-3">
+         <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <span class="absolute top-2 right-2 z-10 bg-gray-500 text-white text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">Save 10%</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-5.jpg" alt="Sneaker" />
+          <img class="secondary w-full h-full object-cover" src="images/image-6.jpg" alt="Sneaker alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Rest in Nature T-Shirt Charcoal</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">1,211 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-pink-200 mb-3">
+          <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-7.jpg" alt="Banana" />
+          <img class="secondary w-full h-full object-cover" src="images/image-8.jpg" alt="Banana alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Outside Vibes Cap Forest Green</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">1,534 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-pink-300 mb-3">
+          <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <span class="absolute top-2 right-2 z-10 bg-gray-500 text-white text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">Save 10%</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-9.jpg" alt="Toy car" />
+          <img class="secondary w-full h-full object-cover" src="images/image-10.jpg" alt="Toy car alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Rest in Nature T-Shirt Charcoal</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">1,234 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-blue-100 mb-3">
+          <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-11.jpg" alt="Running shoe" />
+          <img class="secondary w-full h-full object-cover" src="images/image-12.jpg" alt="Running shoe alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Trail Runner Pro White</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">987 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-orange-100 mb-3">
+          <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-13.jpg" alt="Watch" />
+          <img class="secondary w-full h-full object-cover" src="images/image-14.jpg" alt="Watch alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Classic Watch Tan Leather</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">2,105 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-teal-100 mb-3">
+                   <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-16.jpg" alt="Backpack" />
+          <img class="secondary w-full h-full object-cover" src="images/image-15.jpg" alt="Backpack alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Urban Pack Olive Green</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">1,876 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-purple-100 mb-3">
+         <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-17.jpg" alt="Perfume" />
+          <img class="secondary w-full h-full object-cover" src="images/image-18.jpg" alt="Perfume alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Midnight Bloom Fragrance</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">654 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+      <div class="product-card shrink-0 w-170 md:w-230">
+        <div class="card-img-wrap relative rounded-xl overflow-hidden aspect-square bg-green-100 mb-3">
+         <span class="absolute top-2 left-2 z-10 text-black text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-black bg-white">Best Seller</span>
+          <img class="primary w-full h-full object-cover absolute inset-0" src="images/image-19.jpg" alt="Sneaker green" />
+          <img class="secondary w-full h-full object-cover" src="images/image-20.jpg" alt="Sneaker green alt" />
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 leading-tight mb-0.5">Forest Run Shoe Green</p>
+        <div class="flex items-center gap-1 mb-0.5">
+          <div class="flex items-center gap-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#111111" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-[10px] text-gray-400">1,100 Reviews</span>
+        </div>
+        <p class="text-sm font-semibold">$104.95</p>
+      </div>
+
+    </div>
+    <div class="hidden md:block mt-4 h-[2px] bg-gray-200 rounded-full overflow-hidden">
+      <div id="slider-progress" class="h-full bg-gray-900 rounded-full transition-all duration-200" style="width: 20%"></div>
+    </div>
+
+  </div>
+
+
+  <div class="md:hidden">
+    <div class="flex justify-center mt-6">
+      <button id="show-more-btn" aria-expanded="false"
+        class="flex items-center gap-2 px-6 py-2.5 border border-gray-900 rounded-full text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors duration-200">
+        <span id="btn-label">Show more</span>
+        <svg id="btn-chevron" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</section>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
