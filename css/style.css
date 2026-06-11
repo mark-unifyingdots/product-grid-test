@@ -30,18 +30,6 @@
   opacity: 1;
 }
 
-/* Mobile show-more smooth dropdown */
-#more-cards {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
-}
-#more-cards.open {
-  max-height: 2400px;
-  opacity: 1;
-}
-
 /* Drag cursor on slider */
 .slider-track {
   cursor: grab;
