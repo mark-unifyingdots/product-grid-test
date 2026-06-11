@@ -2,27 +2,15 @@
 document.addEventListener('DOMContentLoaded', function () {
   // SLIDER / LAYOUT
   var track = document.getElementById('slider-track');
-  var progress = document.getElementById('slider-progress');
 
   if (!track) {
     console.warn('Slider track not found: #slider-track');
   } else {
     // Show/hide progress based on screen size
     var isDesktop = window.matchMedia('(min-width: 768px)').matches;
-    if (progress) progress.style.display = isDesktop ? '' : 'none';
 
     // Desktop: enable scroll progress + pointer drag
     if (isDesktop) {
-      function updateProgress() {
-        if (!progress) return;
-        var max = track.scrollWidth - track.clientWidth;
-        var pct = max > 0 ? (track.scrollLeft / max) * 80 + 20 : 20;
-        progress.style.width = pct + '%';
-      }
-
-      track.addEventListener('scroll', updateProgress);
-      updateProgress();
-
       // Drag-to-scroll (pointer/touch friendly)
       var isDown = false;
       var startX = 0;
@@ -96,36 +84,5 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
-  // MOBILE: emulate hover via tap — toggle `.hover` on the image wrapper
-  (function setupMobileTapHover() {
-    function isMobile() { return window.matchMedia('(max-width: 767px)').matches; }
-
-    var cards = Array.from(document.querySelectorAll('.product-card'));
-    if (!cards.length) return;
-
-    cards.forEach(function (card) {
-      var wrap = card.querySelector('.card-img-wrap');
-      if (!wrap) return;
-
-      wrap.addEventListener('click', function (e) {
-        if (!isMobile()) return;
-        // close other hovered wraps first
-        document.querySelectorAll('.card-img-wrap.hover').forEach(function (el) {
-          if (el !== wrap) el.classList.remove('hover');
-        });
-        wrap.classList.toggle('hover');
-        e.stopPropagation();
-      });
-    });
-
-    // Tapping outside a hovered card will close any open hover states
-    document.addEventListener('click', function (e) {
-      if (!isMobile()) return;
-      if (!e.target.closest('.card-img-wrap')) {
-        document.querySelectorAll('.card-img-wrap.hover').forEach(function (el) { el.classList.remove('hover'); });
-      }
-    });
-  })();
 
 });
