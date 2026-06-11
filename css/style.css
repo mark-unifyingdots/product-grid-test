@@ -1,5 +1,5 @@
 .custom-scroll::-webkit-scrollbar {
-  height: 6px;
+  height: 3px;
 }
 .custom-scroll::-webkit-scrollbar-track {
   background: #e5e5e5;
@@ -8,6 +8,9 @@
 .custom-scroll::-webkit-scrollbar-thumb {
   background: #111111;
   border-radius: 9px;
+}
+.custom-scroll:hover::-webkit-scrollbar {
+  height: 6px;
 }
 
 /* Image swap on hover */
